@@ -1,11 +1,11 @@
-<div>
+<div class="container">
   <h2>Tic-Tac-Toe!</h2>
 
-  <div class="main">
-    <a href="#" class="button"> Start </a>
+  <div *ngIf="showStart" class="main">
+    <a href="#" (click)="onStartGame()" class="button"> Start </a>
   </div>
 
-  <div>
+  <div *ngIf="showBoard" class="board">
     <ul>
       <li class="kz-border-bottom kz-border-right"></li>
       <li class="kz-border-bottom kz-border-right"></li>
@@ -19,7 +19,7 @@
     </ul>
   </div>
 
-  <div>
+  <div *ngIf="showEnd" class="game-over">
     <span>
       <p>You won!!!</p>
       <p>You lost!</p>

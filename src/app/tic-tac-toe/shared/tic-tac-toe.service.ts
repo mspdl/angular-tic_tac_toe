@@ -53,7 +53,8 @@ export class TicTacToeService {
 
   startGame(): void {
     this._showStart = false;
-    this._showEnd = true;
+    this._showBoard = true;
+    this._showEnd = false;
   }
 
   play(posX: number, posY: number): void {
