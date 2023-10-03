@@ -155,11 +155,11 @@ export class TicTacToeService {
           }
         }
       }
-      let randomPosX = Math.floor(Math.random() * (moves.length - 1));
+      let randomPosX = Math.floor((Math.random() * (moves.length - 1)));
       move = [moves[randomPosX][0], moves[randomPosX][1]];
     }
 
-    this.board[(move[0], move[1])] == this._player;
+    this.board[move[0]][move[1]] = this._player;
     this.moveCount++;
     this.victory = this.gameOver(move[0], move[1], this.board, this._player);
     this.nextPlayer();

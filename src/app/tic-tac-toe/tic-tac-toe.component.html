@@ -7,15 +7,94 @@
 
   <div *ngIf="showBoard" class="board">
     <ul>
-      <li class="kz-border-bottom kz-border-right"></li>
-      <li class="kz-border-bottom kz-border-right"></li>
-      <li class="kz-border-bottom"></li>
-      <li class="kz-border-bottom kz-border-right"></li>
-      <li class="kz-border-bottom kz-border-right"></li>
-      <li class="kz-border-bottom"></li>
-      <li class="kz-border-right"></li>
-      <li class="kz-border-right"></li>
-      <li></li>
+      <li
+        class="kz-border-bottom kz-border-right"
+        [ngClass]="{
+          'kz-img-x': onSetToX(0, 0),
+          'kz-img-o': onSetToO(0, 0),
+          'kz-victory-color': onShowVictory(0, 0)
+        }"
+        (click)="onPlay(0, 0)"
+      ></li>
+
+      <li
+        class="kz-border-bottom kz-border-right"
+        [ngClass]="{
+          'kz-img-x': onSetToX(0, 1),
+          'kz-img-o': onSetToO(0, 1),
+          'kz-victory-color': onShowVictory(0, 1)
+        }"
+        (click)="onPlay(0, 1)"
+      ></li>
+
+      <li
+        class="kz-border-bottom"
+        [ngClass]="{
+          'kz-img-x': onSetToX(0, 2),
+          'kz-img-o': onSetToO(0, 2),
+          'kz-victory-color': onShowVictory(0, 2)
+        }"
+        (click)="onPlay(0, 2)"
+      ></li>
+
+      <li
+        class="kz-border-bottom kz-border-right"
+        [ngClass]="{
+          'kz-img-x': onSetToX(1, 0),
+          'kz-img-o': onSetToO(1, 0),
+          'kz-victory-color': onShowVictory(1, 0)
+        }"
+        (click)="onPlay(1, 0)"
+      ></li>
+
+      <li
+        class="kz-border-bottom kz-border-right"
+        [ngClass]="{
+          'kz-img-x': onSetToX(1, 1),
+          'kz-img-o': onSetToO(1, 1),
+          'kz-victory-color': onShowVictory(1, 1)
+        }"
+        (click)="onPlay(1, 1)"
+      ></li>
+
+      <li
+        class="kz-border-bottom"
+        [ngClass]="{
+          'kz-img-x': onSetToX(1, 2),
+          'kz-img-o': onSetToO(1, 2),
+          'kz-victory-color': onShowVictory(1, 2)
+        }"
+        (click)="onPlay(1, 2)"
+      ></li>
+
+      <li
+        class="kz-border-right"
+        [ngClass]="{
+          'kz-img-x': onSetToX(2, 0),
+          'kz-img-o': onSetToO(2, 0),
+          'kz-victory-color': onShowVictory(2, 0)
+        }"
+        (click)="onPlay(2, 0)"
+      ></li>
+
+      <li
+        class="kz-border-right"
+        [ngClass]="{
+          'kz-img-x': onSetToX(2, 1),
+          'kz-img-o': onSetToO(2, 1),
+          'kz-victory-color': onShowVictory(2, 1)
+        }"
+        (click)="onPlay(2, 1)"
+      ></li>
+
+      <li
+        [ngClass]="{
+          'kz-img-x': onSetToX(2, 2),
+          'kz-img-o': onSetToO(2, 2),
+          'kz-victory-color': onShowVictory(2, 2)
+        }"
+        (click)="onPlay(2, 2)"
+      ></li>
     </ul>
   </div>
 
