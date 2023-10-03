@@ -13,6 +13,10 @@ export class TicTacToeComponent implements OnInit {
     this.ticTacToeService.start();
   }
 
+  get player(): number {
+    return this.ticTacToeService.player;
+  }
+
   get showStart(): boolean {
     return this.ticTacToeService.showStart;
   }
@@ -43,5 +47,9 @@ export class TicTacToeComponent implements OnInit {
 
   onShowVictory(posX: number, posY: number): boolean {
     return this.ticTacToeService.showVictory(posX, posY);
+  }
+
+  onNewGame(): void {
+    this.ticTacToeService.newGame();
   }
 }

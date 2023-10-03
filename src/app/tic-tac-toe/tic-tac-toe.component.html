@@ -100,11 +100,12 @@
 
   <div *ngIf="showEnd" class="game-over">
     <span>
-      <p>You won!!!</p>
-      <p>You lost!</p>
-      <p>Draw!!</p>
-      <br />
-      <a href="#" class="button">Play again</a>
+      <p *ngIf="player === 2">You won!!!</p>
+      <p *ngIf="player === 1">You lost!</p>
+      <p *ngIf="player === 0">Draw!!</p>
     </span>
   </div>
+  <a *ngIf="showBoard" href="#" class="button" (click)="onNewGame()">{{
+    showEnd ? "Play again" : "Reset"
+  }}</a>
 </div>
